@@ -1,0 +1,265 @@
+body {
+  background-color: hsl(229, 57%, 11%);
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 28%;
+  right: 22%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.desktop-bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+/*************************************** left div(styling only left div inside here)***********************************************/
+.left-div {
+  height: 180px;
+  width: 340px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 8px;
+  border-top-right-radius: 100px;
+}
+
+/* dark blue individual div holding folder,document,upload icon */
+.folder-bg-div,
+.upload-bg-div,
+.document-bg-div {
+  height: 45px;
+  width: 45px;
+  margin: 10px;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.fylo-logo {
+  position: relative;
+  top: 35px;
+  left: 34px;
+}
+
+/* parent div holding all doc,upload,folder icon div holding images, used for div aligned in row */
+.icon-holder-div {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 0 0 20px;
+}
+
+/*************************************** right div(styling only right div inside here)*********************************/
+.right-div {
+  height: 130px;
+  width: 585px;
+  background-color: hsl(228, 56%, 26%);
+  position: relative;
+  top: 50px;
+  border-radius: 8px;
+}
+.parameter {
+  height: 16px;
+  width: 500px;
+  background-color: #151e49;
+  position: relative;
+  top: 60px;
+  left: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.color-liquid {
+  height: 12px;
+  width: 400px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #151e49;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+}
+.white-circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: hsl(243, 100%, 93%);
+  position: relative;
+  left: 389px;
+  top: 1px;
+}
+
+.comment-svg {
+  position: absolute;
+  left: 78%;
+  top: 2%;
+  z-index: 1;
+}
+
+/* para, 0 GB , 1000GB */
+
+.sentence,
+.zero-gb,
+.thousand-gb {
+  position: absolute;
+  color: hsl(243, 100%, 93%);
+}
+.sentence {
+  top: 14%;
+  left: 7%;
+  font-weight: 400;
+}
+.zero-gb {
+  top: 55%;
+  left: 7%;
+  font-weight: 700;
+}
+.thousand-gb {
+  font-weight: 700;
+  top: 55%;
+  left: 85%;
+}
+
+/*****************************container holding both right and left div***************************/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.left-div,
+.right-div {
+  margin: 0 10px;
+}
+.positioning-container {
+  position: relative;
+  height: 200px;
+  width: 950px;
+  top: 250px;
+  left: 260px;
+}
+@media (max-width: 1440px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+  }
+  .desktop-bg {
+    display: none;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .attribution {
+    display: static;
+    left: 20%;
+    right: 20%;
+  }
+  .comment-svg {
+    display: none;
+  }
+  .positioning-container {
+    position: absolute;
+    height: 400px;
+    width: 68%;
+    left: 15%;
+    right: 15%;
+    top: 25%;
+    bottom: 25%;
+  }
+  .right-div {
+    width: 100%;
+    position: static;
+    height: 140px;
+  }
+  .right-div,
+  .left-div {
+    margin: 10px 0;
+  }
+  .parameter {
+    width: 80%;
+    top: 44%;
+    left: 11%;
+  }
+  .color-liquid {
+    width: 42vw;
+  }
+  .white-circle {
+    left: 95.5%;
+    position: sticky;
+  }
+  .thousand-gb {
+    top: 15.5%;
+    right: auto;
+    left: 74%;
+    width: 60px;
+    height: 20px;
+  }
+  .zero-gb {
+    left: 11%;
+    top: 40%;
+    width: 40px;
+    height: 20px;
+  }
+  .sentence {
+    top: 56%;
+    left: 11.5%;
+  }
+  .zero-gb,
+  .thousand-gb {
+    position: relative;
+  }
+
+  .mobile-comment {
+    background-image: url("images/Union.svg");
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 170px;
+    position: relative;
+    top: 0%;
+    left: 25%;
+    z-index: 1;
+  }
+}
+@media (max-width: 557px) {
+  .left-div,
+  .positioning-container {
+    width: 340px;
+  }
+  .mobile-comment {
+    top: 9%;
+  }
+  .positioning-container {
+    margin: auto;
+  }
+  .color-liquid {
+    width: 200px;
+  }
+}
+@media (max-width: 376px) {
+  .positioning-container {
+    left: 2.5%;
+
+    width: 320px;
+  }
+  .left-div {
+    width: 320px;
+  }
+}
